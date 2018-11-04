@@ -2,7 +2,7 @@ const keys = require('./keys');
 
 //  Express
 const express = require('express');
-const bodyParser = require('body-perser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
@@ -50,7 +50,7 @@ app.get('/values/current', async (req, res) => {
     });
 });
 
-app.posy('/values', async (req, res) => {
+app.post('/values', async (req, res) => {
     const index = req.body.index;
 
     if (parseInt(index) > 40) {
